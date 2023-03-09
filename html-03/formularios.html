@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+
+    <form action="" method="post">
+        <div>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre_usuario" id="nombre" placeholder="Ingrese su nombre" required>
+        </div>
+
+        <div>
+            <label for="fecha">Fecha: </label>
+            <input type="date" name="fecha" id="fecha">
+        </div>
+
+        <div>
+            <label for="archivo">Archivo: </label>
+            <input type="file" name="archivo" id="archivo">
+        </div>
+
+        <div>
+            <label for="mensaje">Mensaje: </label>
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <label for="provincias">Provincias: </label>
+            <select name="provincias" id="provincias">
+                <option value=""></option>
+                <option value="1">Buenos Aires</option>
+                <option value="2">Cordoba</option>
+            </select>
+        </div>
+
+        <pre>
+            hola
+                            mundo
+        </pre>
+
+        <pre>
+            <p>Message from my computer:</p>
+                    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+        </pre>
+
+        <code>
+        &lt;p&gt;Message from my computer:&lt;/p&gt; <br>
+&lt;p&gt;&lt;samp&gt;File not found.&lt;br&gt;Press F1 to continue&lt;/samp&gt;&lt;/p&gt;
+
+</code>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

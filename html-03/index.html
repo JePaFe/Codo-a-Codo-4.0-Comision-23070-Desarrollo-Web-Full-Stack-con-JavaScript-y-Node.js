@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+    <style>
+        img {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/plumber.jpg" alt="Plomero">
+    <img src="img/code.jpg" alt="Codigo">
+
+    <picture>
+        <source media="(min-width:650px)" srcset="img/code-2.jpg">
+        <source media="(min-width:465px)" srcset="img/code.jpg">
+        <img src="img/plumber.jpg" alt="Plomero" style="width:auto;">
+      </picture>
+</body>
+</html>
