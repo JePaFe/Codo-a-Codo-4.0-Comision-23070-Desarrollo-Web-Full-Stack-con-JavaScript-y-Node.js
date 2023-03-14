@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid; */
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+p {
+    margin-bottom: .25em;
+    color: green;
+}
+
+.destacado {
+    color: red;
+}
+
+.rojo {
+    color: darkred
+}
+
+#primer-parrafo {
+    color: blue;
+}

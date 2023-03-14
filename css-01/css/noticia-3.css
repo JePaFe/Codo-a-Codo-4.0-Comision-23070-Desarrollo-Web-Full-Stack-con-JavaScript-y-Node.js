@@ -1,0 +1,12 @@
+p {
+    color: green;
+    /* color: green!important; */
+}
+
+.destacado {
+    color: red;
+}
+
+#parrafo {
+    color: blue;
+}
