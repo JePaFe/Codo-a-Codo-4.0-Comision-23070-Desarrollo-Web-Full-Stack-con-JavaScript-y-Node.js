@@ -1,0 +1,41 @@
+h1:hover {
+    text-decoration: underline;
+}
+
+input:focus {
+    border: 5px solid red;
+    outline: 3px solid green;
+    outline-offset: -13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: rgb(85, 4, 4);
+    text-decoration: line-through;
+}
+
+a:active {
+    color: rgb(161, 40, 131);
+}
+
+a:hover {
+    cursor: crosshair;
+}
+
+.cuadrado {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    transition: background-color 4s;
+}
+
+.cuadrado:hover {
+    background-color: red;
+}
