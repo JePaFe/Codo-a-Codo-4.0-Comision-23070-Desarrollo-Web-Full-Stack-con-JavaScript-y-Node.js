@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+  background-color: gray;
+}
+.containter {
+  box-sizing: inherit;
+  width: 1000px;
+  color: white;
+  background-color: lightyellow;
+  border: 1px solid black;
+  padding: 0.5em;
+  display: flex;
+  min-height: 90vh;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  /* flex-flow: row wrap; */
+  /* gap: .5em; */
+  /* column-gap: 2em; */
+  /* row-gap: 3em; */
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+.item {
+  border: 1px solid black;
+  padding: 0.5em;
+  margin: 0.5em;
+  /* flex-grow: 1; */
+}
+.item-1 {
+  background-color: blue;
+}
+.item-2 {
+  background-color: green;
+  min-width: 100px;
+  flex-basis: 150px;
+  /* font-size: 3em; */
+}
+.item-3 {
+  background-color: red;
+  height: 100px;
+}
+.item-4 {
+  background-color: violet;
+  width: 200px;
+  /* flex-shrink: 10; */
+}
+.item-5 {
+  background-color: brown;
+  width: 150px;
+  height: 100px;
+}
+.item-6 {
+  background-color: goldenrod;
+  width: 250px;
+}
