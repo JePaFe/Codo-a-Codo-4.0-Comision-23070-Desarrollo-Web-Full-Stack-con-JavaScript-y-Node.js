@@ -1,0 +1,35 @@
+body {
+  background-color: aqua;
+  margin: 0;
+  color: snow;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr minmax(200px, 1fr);
+  grid-template-rows: 100px 1fr 3rem;
+  grid-template-areas:
+    "arriba arriba"
+    "main aside"
+    "footer footer";
+  gap: 0.5em;
+}
+
+header {
+  background-color: red;
+  /* grid-column: 1 / -1; */
+  grid-area: arriba;
+}
+
+main {
+  background-color: darkorange;
+  grid-area: main;
+}
+
+aside {
+  background-color: green;
+  grid-area: aside;
+}
+
+footer {
+  background-color: blue;
+  grid-area: footer;
+}
