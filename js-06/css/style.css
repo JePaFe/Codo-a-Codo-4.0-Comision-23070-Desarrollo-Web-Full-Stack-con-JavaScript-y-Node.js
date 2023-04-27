@@ -1,0 +1,20 @@
+/* p.destacado:nth-child(3) {
+  color: red;
+}
+
+#parrafo.destacado {
+  color: green;
+} */
+
+h1 {
+  padding: 1em;
+  border: 5px solid;
+}
+
+h2 ~ p {
+  color: blueviolet;
+}
+
+.error {
+  color: red;
+}
