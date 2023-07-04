@@ -1,0 +1,45 @@
+<% if (typeof errors !='undefined' ) { %> <% errors.forEach(error=> { %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error.msg %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<% }) %> <% } %>
+
+<h1>Crear Usuario</h1>
+
+<form action="/users" method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo: </label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      value="<%= values.email %>"
+    />
+    <% if (typeof errors !='undefined' ) { errors.forEach(error=> {
+    if(error.path == 'email') { %>
+    <p class="text-danger"><%= error.msg %></p>
+    <% } }) } %>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Contraseña: </label>
+    <input type="password" class="form-control" id="password" name="password" />
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Imagen: </label>
+    <input
+      type="file"
+      class="form-control"
+      id="image"
+      name="image"
+      accept="image/*"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>
