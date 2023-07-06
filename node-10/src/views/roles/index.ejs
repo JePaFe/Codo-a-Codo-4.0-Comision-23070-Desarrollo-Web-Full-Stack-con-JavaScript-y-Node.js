@@ -1,0 +1,23 @@
+<h1>Roles</h1>
+<a href="/roles/create" class="btn btn-sm btn-primary">Crear</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Role</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% rows.forEach(role => { %>
+    <tr>
+      <td><%= role.id %></td>
+      <td><%= role.name %></td>
+      <td>
+      </td>
+      <td></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>

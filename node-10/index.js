@@ -36,6 +36,7 @@ app.get("/", (req, res) => {
 
 app.use("/", require("./src/routes/authRouter"));
 
+app.use("/roles", isLogin, require("./src/routes/roleRouter"));
 app.use("/users", isLogin, require("./src/routes/userRouter"));
 
 const PORT = process.env.PORT || 3000;
