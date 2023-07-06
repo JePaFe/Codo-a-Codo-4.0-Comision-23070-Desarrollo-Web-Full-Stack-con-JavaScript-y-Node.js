@@ -30,9 +30,38 @@ const store = async (req, res) => {
   res.redirect("/roles");
 };
 
+const edit = async (req, res) => {
+  const row = await service.findOne(req.params);
+  res.render("roles/edit", { values: row });
+};
+
+const update = async (req, res) => {
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.render("roles/edit", {
+      values: req.body,
+      errors: errors.array(),
+    });
+  }
+
+  await service.update(req.body);
+
+  res.redirect("/roles");
+};
+
+const destroy = async (req, res) => {
+  await service.destroy(req.params);
+
+  res.redirect("/roles");
+};
+
 module.exports = {
   index,
   show,
   create,
   store,
+  edit,
+  update,
+  destroy
 };

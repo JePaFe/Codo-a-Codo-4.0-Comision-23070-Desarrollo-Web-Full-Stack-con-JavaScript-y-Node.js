@@ -1,5 +1,9 @@
-<h1>Roles</h1>
-<a href="/roles/create" class="btn btn-sm btn-primary">Crear</a>
+<div class="row align-items-center">
+  <div class="col"><h1>Roles</h1></div>
+  <div class="col text-end">
+    <a href="/roles/create" class="btn btn-sm btn-primary">Crear</a>
+  </div>
+</div>
 
 <table class="table table-striped">
   <thead>
@@ -14,10 +18,32 @@
     <tr>
       <td><%= role.id %></td>
       <td><%= role.name %></td>
-      <td>
+      <td class="text-end">
+        <a href="/roles/edit/<%= role.id %>" class="btn btn-sm btn-info"
+          >Editar</a
+        >
+        <form
+          class="form-delete"
+          action="/roles/<%= role.id %>?_method=DELETE"
+          method="post"
+          style="display: inline-block"
+        >
+          <button type="submit" class="btn btn-sm btn-danger">Borrar</button>
+        </form>
       </td>
-      <td></td>
     </tr>
     <% }) %>
   </tbody>
 </table>
+
+<script>
+  document.addEventListener("submit", (event) => {
+    if (event.target.classList.contains("form-delete")) {
+      event.preventDefault();
+
+      if (confirm("¿Esta seguro?")) {
+        event.target.submit();
+      }
+    }
+  });
+</script>

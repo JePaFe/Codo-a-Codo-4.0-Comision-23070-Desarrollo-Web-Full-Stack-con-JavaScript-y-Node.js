@@ -2,6 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 
+const methodOverride = require("method-override");
+
 const session = require("cookie-session");
 
 app.use(
@@ -21,6 +23,7 @@ app.set("layout", "./layouts/public");
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 const isLogin = (req, res, next) => {
   if (!req.session.user_id) {
