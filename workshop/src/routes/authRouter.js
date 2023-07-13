@@ -11,12 +11,10 @@ const registerValidations = [
     .bail()
     .custom((value, { req }) => {
       return new Promise((resolve, reject) => {
-        // console.log(value, req.body);
         sql = "SELECT * FROM users WHERE email = ?";
         wheres = [value];
 
         conn.query(sql, wheres).then((row) => {
-          // console.log(row, row[0].length);
           if (row[0].length != 0) {
             return reject();
           }
@@ -73,10 +71,10 @@ router.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-// router.get("/forgot", controller.forgot);
-// router.post("/forgot", forgotValidations, controller.postForgot);
+router.get("/forgot", controller.forgot);
+router.post("/forgot", forgotValidations, controller.postForgot);
 
-// router.get("/reset", controller.reset);
-// router.post("/reset/:id/:token", controller.postReset);
+router.get("/reset/:id/:token", controller.reset);
+router.post("/reset", resetValidations, controller.postReset);
 
 module.exports = router;
